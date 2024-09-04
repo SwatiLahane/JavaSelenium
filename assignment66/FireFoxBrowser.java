@@ -1,12 +1,13 @@
 package assignment66;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 public class FireFoxBrowser {
 
-	public static void main(String[] args)
-	{
-	      FireFoxBrowser driver = new FireFoxBrowser(); //It will Launch Empty Firefox Browser
-	      
-
+	public static void main(String[] args) {
+		
+		FirefoxDriver driver = new FirefoxDriver(); //To launch firefox Driver
+		
 	}
 
 }

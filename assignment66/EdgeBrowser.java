@@ -1,11 +1,14 @@
 package assignment66;
 
+import org.openqa.selenium.edge.EdgeDriver;
+
 public class EdgeBrowser {
 
 	public static void main(String[] args) {
 		
-		EdgeBrowser driver = new EdgeBrowser(); //It will Launch Empty Edge Browser
-
+		EdgeDriver driver = new EdgeDriver(); //to  launch EdgeBrowser
+		
+		
 	}
 
 }
