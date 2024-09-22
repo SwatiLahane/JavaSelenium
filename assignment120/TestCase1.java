@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 
 /* WAP to run multiple testcases together using TestNg
@@ -61,7 +62,14 @@ public class TestCase1   //LaunchAndQuit
       
          signinButtn.click();
          
-         WebElement textbox = driver.findElement(By.id("twotabsearchtextbox"));
+        
+ }
+     
+     
+     @Test 
+     public void searching_For_Product() throws IOException
+     {
+    	 WebElement textbox = driver.findElement(By.id("twotabsearchtextbox"));
 
          textbox.sendKeys("Womens T-shirts");
          
@@ -74,8 +82,6 @@ public class TestCase1   //LaunchAndQuit
         File Destination = new File("C:\\Users\\Lenovo\\Desktop\\Screenshot\\Tshirt.png"+Math.random()+".png");
          
          FileHandler.copy(Source, Destination);
-     
-     
      }
      
      
@@ -98,8 +104,6 @@ public class TestCase1   //LaunchAndQuit
   	     
     	Thread.sleep(2000);
     	driver.quit();
-    	
-    	
     	
     }
 }
