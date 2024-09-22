@@ -1,3 +1,5 @@
+
+
 package assignment120;
 
 import java.io.File;
@@ -13,6 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 
 public class TestCase2 
@@ -42,10 +45,10 @@ public class TestCase2
          
           WebElement un = driver.findElement(By.id("ap_email"));
      	
- 	      un.sendKeys("lahaneswati24@gmail.com");
+ 	  un.sendKeys("lahaneswati24@gmail.com");
  	   
- 	      WebElement btn = driver.findElement(By.id("continue"));
- 	      btn.click();
+ 	  WebElement btn = driver.findElement(By.id("continue"));
+ 	  btn.click();
  	  
  	     WebElement password = driver.findElement(By.id("ap_password"));
          password.sendKeys("swati_@lahane");  
@@ -54,7 +57,19 @@ public class TestCase2
      
          signinButtn.click();
          
-         WebElement textbox = driver.findElement(By.id("twotabsearchtextbox"));
+        
+   
+   
+   }
+   
+    
+    @Test
+    public void Searching_for_product() throws IOException
+     {
+    	
+    	
+    	
+    	 WebElement textbox = driver.findElement(By.id("twotabsearchtextbox"));
 
          textbox.sendKeys("Womens T-shirts");
          
@@ -70,21 +85,23 @@ public class TestCase2
         
         FileHandler.copy(Source, Destination);
    
-   
-   }
-   
+     
+     }
+    
+    
+    
     @AfterMethod
    	 public void logout_To_Amazon() throws InterruptedException
      {
     	    	//Logout to amazon
     	    	
     	    	//See where is Account n listas take class name from there
-    	  	     WebElement w1 = driver.findElement(By.xpath("(//span[@class ='nav-line-2'])[1]"));
+    	  	 WebElement w1 = driver.findElement(By.xpath("(//span[@class ='nav-line-2'])[1]"));
     	  	     
-    	  	     Actions s2 = new Actions(driver); 
-    	  	     s2.moveToElement(w1).perform();
+    	  	 Actions s2 = new Actions(driver); 
+    	  	 s2.moveToElement(w1).perform();
     	  	     
-    	  	     WebElement w2 = driver.findElement(By.xpath("//span[.='Sign Out']"));
+    	  	 WebElement w2 = driver.findElement(By.xpath("//span[.='Sign Out']"));
     	         w2.click();
     	  	  
     	    	 
@@ -98,6 +115,7 @@ public class TestCase2
 
 
 
+}
 
 
 
