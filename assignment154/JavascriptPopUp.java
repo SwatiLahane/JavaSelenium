@@ -20,7 +20,7 @@ public class JavascriptPopUp
 		 driver.manage().window().maximize();
 		 driver.get("https://grotechminds.com/javascript-popup/");
 		 
-		 driver.findElement(By.xpath("//button[@class='btnjs']"));
+		 driver.findElement(By.xpath("//button[@class='btnjs']")).click();
 		  
 		  WebDriverWait w2 = new WebDriverWait(driver,Duration.ofSeconds(10));
 		  w2.until(ExpectedConditions.titleIs("JavaScript Popup - GroTechMinds"));
